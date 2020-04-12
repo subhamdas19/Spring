@@ -25,3 +25,69 @@ and finds the natching URL.@RestController is basically RESTful web services.
 
 @RESTController is basically @Controller + @ResponseBody.@ResponseBody is used to tell Spring this is response body and it will parse the HTTP web response as JSON/XML
 
+
+The @Component annotation marks a java class as a bean so the component-scanning mechanism of spring can pick it up and pull it into the application context. To use this annotation, apply it over class as below:
+
+@Component
+public class EmployeeDAOImpl implements EmployeeDAO {
+    ...
+}
+
+@Autowired annotation is used to let Spring know that autowiring is required. This can be applied to field, constructor and methods. This annotation allows us to implement constructor-based, field-based or method-based dependency injection in our components.
+enables you to inject the object dependency implicitly.
+
+ Spring Configuration annotation indicates that the class has @Bean definition methods. So Spring container can process the class and generate Spring Beans to be used in the application.
+
+@ComponentScan annotation is used with @Configuration annotation to specify the packages to look for Component classes.
+@Bean annotation is used to let Spring framework know that this method should be used to get the bean implementation to inject in Component classes.
+
+
+
+AnnotationConfigApplicationContext constructor takes Class as argument that will be used to get the bean implementation to inject in component classes.
+
+getBean(Class) method returns the Component object
+
+ClassPathXmlApplicationContext is used to get the ApplicationContext object by providing the configuration files location
+
+The @Qualifier annotation is used to resolve the autowiring conflict, when there are multiple beans of same type
+context:annotation-config is used to enable annotation based configuration support.
+https://www.baeldung.com/spring-vs-spring-boot
+
+https://www.journaldev.com/7969/spring-boot-tutorial
+
+
+https://javarevisited.blogspot.com/2017/10/differences-between-requestparam-and-pathvariable-annotations-spring-mvc.html
+
+
+
+Spring @Repository annotation is used to indicate that the class provides the mechanism for storage, retrieval, search, update and delete operation on objects.
+https://www.journaldev.com/2433/spring-mvc-tutorial
+
+https://www.javatpoint.com/spring-mvc-tutorial
+@Controller annotation is used to indicate that it’s a web controller class.
+This annotation is used to make a class as a web controller, which can handle client requests and send a response back to the client.
+
+Read more: https://www.java67.com/2019/04/top-10-spring-mvc-and-rest-annotations-examples-java.html#ixzz6J8XQPjLJ
+
+
+@RequestMapping is used with classes and methods to redirect the client request to specific handler method. 
+https://javarevisited.blogspot.com/2017/10/differences-between-requestparam-and-pathvariable-annotations-spring-mvc.html
+The @RequestParam is used to extract query parameters while @PathVariable is used to extract data right from the URI. ... Even though both are used to extract data from URL, @RequestParam is used to retrieve query parameters, anything after ? in the URL, while @PathVariable is used to retrieve values from URI itself
+
+https://www.baeldung.com/spring-request-response-body
+https://www.journaldev.com/3531/spring-mvc-hibernate-mysql-integration-crud-example-tutorial
+https://www.baeldung.com/spring-controller-vs-restcontroller
+@RequestHeader annotation binds request header values to method parameters
+https://www.viralpatel.net/spring-requestheader-example/
+
+We mark a Service layer with @Transactional when a method in a Service class is having multiple database calls and we want either all calls should happen or no one should happen or we can say if any call fail then whole transaction should rollback.
+If you don't know, Spring Boot aims to simplify Java development with the Spring framework. Currently, Spring does a lot for you, but in return, it also asks a lot from you in terms of configuration and dependency management, Spring Boot aims to solve that problem.
+
+The Spring Boto auto-configuration feature tries to automatically configure your Spring application based upon the JAR dependency you have added in the classpath.
+
+
+Read more: https://www.java67.com/2018/05/difference-between-springbootapplication-vs-EnableAutoConfiguration-annotations-Spring-Boot.html#ixzz6J9LN6oqH
+https://www.java67.com/2018/05/difference-between-springbootapplication-vs-EnableAutoConfiguration-annotations-Spring-Boot.html
+
+https://medium.com/javarevisited/building-a-rest-service-with-spring-boot-and-mongodb-3aa5cd2dce73
+
