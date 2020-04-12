@@ -1,0 +1,27 @@
+https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#spring-annotations
+https://www.java67.com/2019/04/top-10-spring-mvc-and-rest-annotations-examples-java.html#ixzz6J8XQPjLJ
+
+
+
+
+
+Using the annotation @ComponentScan , you can tell Spring where do your Spring-managed components lie. These Spring-Managed components could be annotated with @Repository,@Service, @Controller and ofcourse @Component.
+
+For example - Lets say your spring-managed components lie inside 2 packages com.example.test1 and com.example.test2. Then your componentScan would be something like this
+
+@ComponentScan(basePackages="com.example.test1","com.example.test2")
+OfCourse the annotation ComponentScan has a lot of other elements.
+
+On the other hand, @Component is a generic annotation for any Spring-Managed component. For example - If you create a class called Testing inside the package com.example.test1 and annotate with Spring @Component.
+
+@Componenet-registers the spring bean with spring container...marks ot as spring bean
+
+
+
+@Component vs @RestController
+
+@Component and @RestController is used to mark it as a controller class.It is a request handler.It basically finds the request handler method
+and finds the natching URL.@RestController is basically RESTful web services.
+
+@RESTController is basically @Controller + @ResponseBody.@ResponseBody is used to tell Spring this is response body and it will parse the HTTP web response as JSON/XML
+
