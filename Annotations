@@ -47,6 +47,7 @@ enables you to inject the object dependency implicitly.
 AnnotationConfigApplicationContext constructor takes Class as argument that will be used to get the bean implementation to inject in component classes.
 
 getBean(Class) method returns the Component object
+https://stackoverflow.com/questions/23101260/ignore-fields-from-java-object-dynamically-while-sending-as-json-from-spring-mvc
 
 ClassPathXmlApplicationContext is used to get the ApplicationContext object by providing the configuration files location
 
@@ -92,3 +93,4 @@ https://www.java67.com/2018/05/difference-between-springbootapplication-vs-Enabl
 
 https://medium.com/javarevisited/building-a-rest-service-with-spring-boot-and-mongodb-3aa5cd2dce73
 
+@Validated annotation
